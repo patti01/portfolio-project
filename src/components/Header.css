@@ -1,0 +1,88 @@
+
+.Header {
+    position: fixed; 
+    width: 100%;
+    padding: 20px 0px 20px 40px; 
+    z-index: 100;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)
+}
+
+.HeaderScrolled {
+    background-color: white; 
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #c6c6c6; 
+}
+
+.HeaderGroup {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    max-width: 1200px;
+}
+
+.HeaderNav {
+    flex-grow: 0;
+    max-width: 600px; 
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 50px;
+    align-items: center;
+    justify-items: center;
+}
+
+.Header button {
+    background-color: #0000CD;
+    color:white;
+    font-size: 14px;
+    padding: 8px 32px; 
+    border: none; 
+    border-radius: 64px;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Header button:hover {
+    background: white; 
+    color: #0000CD;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+.menu-item::after {
+    content:'';
+    display: block; 
+    width: 100%;
+    height: 3px; 
+    background-color:#0000CD;
+    visibility: hidden; 
+    transform-origin: left; 
+    transform: scale(0);
+    transition: 0.2s ease-out; 
+} 
+
+.menu-item:hover::after {
+    visibility: visible;
+    transform: scale(1);
+} 
+
+.Header a:hover {
+    color: #0000CD; 
+}
+
+@media (max-width: 640px) {
+    .Header {
+        padding: 15px 10px;
+    }
+
+    .HeaderNav {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .Header a:nth-child(2) {
+        display: none;
+    }
+
+    .Header button {
+        margin-right: 30px;
+    }
+}

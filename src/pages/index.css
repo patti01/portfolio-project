@@ -1,0 +1,103 @@
+.Hero {
+  /*background: url('../images/alu1.jpg');*/ 
+  height: 920px;
+  background-size: cover; 
+  background-position: center; 
+  position: relative; 
+}
+
+.HeroGroup {
+  margin: 0 auto;
+  max-width: 500px; 
+  padding: 150px 50px; 
+  color: white; 
+}
+
+.Hero h1 {
+  margin: 0;
+  color: black; 
+  font-size: 60px; 
+  line-height: 1.2;
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: lighter; 
+  opacity: 0;
+  animation: HeroAnimation; 
+  animation-duration: 3s; 
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero p {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  line-height: 1.5;
+  opacity: 0;
+  animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero a {
+  font-size: 17px; 
+  font-weight: 600;
+  color: #0000CD;
+  text-transform: uppercase; 
+  background: rgba(0 ,0 ,0 , 0.7);
+  padding: 9px 20px; 
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px; 
+  cursor: pointer; 
+}
+
+@media (max-width: 640px) {
+  .HeroGroup {
+    padding: 100px 20px;
+  }
+
+  .Hero h1 {
+    font-size: 40px;
+  }
+
+  .Hero p {
+    font-size: 24px; 
+  }
+}
+
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes FoilAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(64px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.Hero svg {
+  position: absolute;
+  height: 400px; 
+  left: -630px;
+  top: 300px;
+  transform: rotate(-60deg);
+}
+
+.Hero img {
+  position: absolute; 
+  height: 600px; 
+  right: 0px;
+  top: 50px;
+  opacity: 0; 
+  animation: FoilAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
