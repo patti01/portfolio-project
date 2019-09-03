@@ -1,0 +1,46 @@
+.SectionSkills {
+    display: grid; 
+    grid-template-columns: repeat(3, auto); 
+    align-items: center; 
+    justify-items: center; 
+    padding: 20px 20px; 
+    height: 400px; 
+    text-align: center; 
+    z-index: 4; 
+}
+
+.SectionSkills p {
+    color: white; 
+    font-family: 'Archivo Black', sans-serif; 
+    font-size: 32px; 
+    transition: 0.8s; 
+    transition-timing-function: ease-in-out;
+}
+
+.SectionSkills p:hover {
+    font-size: 60px; 
+    color: white; 
+}
+
+#quadri {
+    position: absolute;
+    object-fit: cover; 
+    -webkit-clip-path: ellipse(46% 24% at 48% 48%);
+    clip-path: ellipse(46% 24% at 48% 48%);
+    z-index: -2;
+    right: 200px;
+    top: -80px;
+    height: 500px;
+    transform: rotate(-20deg);
+}
+
+@media (max-width: 720px) {
+    .SectionSkills {
+    grid-template-columns: 1fr;
+    padding: 60px 20px; 
+    } 
+    .SectionSkills p:hover {
+        font-size: 32px; 
+    }
+}
+

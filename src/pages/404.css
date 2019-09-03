@@ -1,0 +1,10 @@
+.error {
+    background-image: url('../images/ripped.png'); 
+    background-size: cover; 
+    width: 100%; 
+    background-position: center; 
+    position: relative;
+    height: 920px;
+    margin: 0 auto; 
+  }
+  

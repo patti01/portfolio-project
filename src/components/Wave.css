@@ -1,0 +1,23 @@
+#wave {
+    position: relative;
+    bottom: -40px;
+    z-index: 6;
+}
+
+#circleRed {
+    position: absolute; 
+    z-index: -1; 
+    right: -10px;
+}
+
+@media (max-width: 720px) {
+    #wave {
+        bottom: -20px; 
+    }
+
+    #circleRed {
+        width: 700px; 
+        height: 700px;
+        right: 50px;
+    }
+}
