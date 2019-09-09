@@ -33,9 +33,6 @@ const IndexPage = () => (
       </svg>
     </div>
 
-    <div className="Cards">
-      <h2>Works</h2>
-    </div>
     <Section
     image = {require('../images/alu3.png')}
     title = "Hit me up for future collaboration"
